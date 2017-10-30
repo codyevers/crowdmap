@@ -110,20 +110,19 @@
 		var drawnItems = new L.FeatureGroup();
 
 		var drawControl = new L.Control.Draw(config.drawOptions);
-		var controlOnMap = false;
-		function startEdits() {
-			if (controlOnMap === true) {
-				map.removeControl(drawControl);
-				controlOnMap = false;
-			}
-			map.addControl(drawControl);
-			controlOnMap = true;
-		}
-		function stopEdits() {
-			map.removeControl(drawControl);
-			controlOnMap = false;
-		}
-
+		//var controlOnMap = false;
+		//function startEdits() {
+		//	if (controlOnMap === true) {
+		//		map.removeControl(drawControl);
+		//		controlOnMap = false;
+		//	}
+		//	map.addControl(drawControl);
+		//	controlOnMap = true;
+		//}
+		//function stopEdits() {
+		//	map.removeControl(drawControl);
+		//	controlOnMap = false;
+		//}
 
 		map.on(L.Draw.Event.CREATED, function (e) {
 	        var layer = e.layer;
